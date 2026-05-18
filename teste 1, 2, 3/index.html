@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    
+  <p>Número gerado: <strong id="numero-aleatorio">...</strong></p>
+     <script>
+        // O código roda assim que a página carrega
+        const numero = Math.floor(Math.random() * 100);
+        document.getElementById("numero-aleatorio").innerText = numero;
+    </script>
+</body>
+
+</html>
