@@ -21,7 +21,6 @@
     </div>
 
     <script>
-        // Função que gera o número (a mesma que criamos antes)
         function gerarNumeroAleatorioPorConjunto() {
             const conjuntos = ['Natural', 'Inteiro', 'Racional', 'Irracional'];
             const conjuntoEscolhido = conjuntos[Math.floor(Math.random() * conjuntos.length)];
@@ -54,17 +53,13 @@
             };
         }
 
-        // Conectando o JavaScript com os elementos da tela (HTML)
         const botao = document.getElementById('btnGerar');
         const elementoNumero = document.getElementById('numero');
         const elementoConjunto = document.getElementById('conjunto');
 
-        // Ouvindo o clique do botão
-        botao.addEventListener('click', function() {
+        function() {
             const resultado = gerarNumeroAleatorioPorConjunto();
             
-            // Atualiza os textos na tela
-            elementoNumero.textContent = resultado.valor;
             elementoConjunto.textContent = `Conjunto Numérico: ${resultado.conjunto}`;
         });
     </script>
