@@ -9,12 +9,10 @@ function gerarNumeroAleatorioPorConjunto() {
 
     switch (conjuntoEscolhido) {
         case 'Natural':
-            // Inteiros de 0 a 99
             numero = Math.floor(Math.random() * 100);
             break;
 
         case 'Inteiro':
-            // Inteiros de -99 a 99 (garantindo duas partes inteiras no máximo)
             numero = Math.floor(Math.random() * 100) * sinal;
             break;
 
@@ -26,7 +24,7 @@ function gerarNumeroAleatorioPorConjunto() {
 
         case 'Irracional':
              let parteInteiraI = Math.floor(Math.random() * 100);
-            let parteDecimalI = Math.random(); // Gera até ~16 casas decimais aleatórias
+            let parteDecimalI = Math.random();
             numero = (parteInteiraI + parteDecimalI) * sinal;
             break;
     }
@@ -37,7 +35,6 @@ function gerarNumeroAleatorioPorConjunto() {
     };
 }
 
-// Testando o código: gera 5 exemplos diferentes
 for (let i = 0; i < 5; i++) {
     const resultado = gerarNumeroAleatorioPorConjunto();
     console.log(`Conjunto: ${resultado.conjunto.padEnd(10)} -> Número: ${resultado.valor}`);
